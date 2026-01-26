@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   background-color: #0f2023;
-  padding: 6rem 1rem 4rem;
+  padding: 2rem 1rem 4rem;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -10,13 +10,13 @@
 
 @media (min-width: 640px) {
   .hero {
-    padding: 8rem 1.5rem 4rem;
+    padding: 2rem 1.5rem 4rem;
   }
 }
 
 @media (min-width: 1024px) {
   .hero {
-    padding: 8rem 2rem 4rem;
+    padding: 2rem 2rem 4rem;
   }
 }
 
