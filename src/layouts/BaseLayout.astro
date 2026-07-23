@@ -1,5 +1,7 @@
 ---
 import Navbar from '@components/common/Navbar.astro';
+import Footer from '@components/common/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
 import '@styles/global.css';
 
 interface Props {
@@ -19,14 +21,13 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body class="min-h-screen flex flex-col justify-between">
     <div>
       <Navbar />
       <slot />
     </div>
-    <footer class="border-t border-borderCustom py-6 text-center text-xs text-txt-muted font-mono">
-      &copy; {new Date().getFullYear()} NAMA.DEV — Built with Astro & Editorial Swiss Style
-    </footer>
+    <Footer />
   </body>
 </html>

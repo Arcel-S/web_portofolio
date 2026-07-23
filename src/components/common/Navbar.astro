@@ -1,19 +1,30 @@
 ---
 import ThemeToggle from './ThemeToggle.astro';
 ---
-<header class="sticky top-0 z-50 bg-bg-primary/90 backdrop-blur-md border-b border-borderCustom">
-  <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-    <a href="/" class="font-serif text-xl font-bold tracking-tight text-txt-primary flex items-center gap-2">
-      <span class="w-2.5 h-2.5 rounded-full bg-brand-terracotta inline-block"></span>
-      NAMA.DEV
+
+<header class="bg-surface-cream dark:bg-surface-charcoal border-b border-ink-black dark:border-ink-border-dark fixed top-0 left-0 w-full z-50 flex justify-between items-center px-grid-margin py-stack-md bg-surface-cream/90 backdrop-blur-sm">
+  <div class="flex items-center gap-stack-lg">
+    <a href="/" class="font-serif text-2xl font-bold tracking-tighter text-ink-black dark:text-ink-white flex items-center gap-2">
+      MARCEL.DEV
     </a>
-    
-    <div class="flex items-center gap-6 text-sm font-medium">
-      <a href="/projects" class="hover:text-brand-terracotta transition-colors">Projects</a>
-      <a href="/experience" class="hover:text-brand-terracotta transition-colors">Experience</a>
-      <a href="/about" class="hover:text-brand-terracotta transition-colors">About</a>
-      <a href="/contact" class="hover:text-brand-terracotta transition-colors">Contact</a>
-      <ThemeToggle />
+    <div class="hidden lg:flex items-center gap-2 bg-accent-sage-dark/10 border border-accent-sage-dark/30 px-3 py-1 rounded">
+      <div class="w-2 h-2 rounded-full bg-accent-sage-dark animate-pulse"></div>
+      <span class="font-mono text-xs text-accent-sage-dark uppercase tracking-wider">7th Sem CS Student • Open to Work</span>
     </div>
+  </div>
+
+  <nav class="hidden md:flex items-center gap-stack-lg">
+    <a class="font-mono text-sm text-ink-gray dark:text-ink-slate font-medium hover:text-primary dark:hover:text-accent-terracotta-dark transition-colors pb-1" href="#about">About</a>
+    <a class="font-mono text-sm text-ink-gray dark:text-ink-slate font-medium hover:text-primary dark:hover:text-accent-terracotta-dark transition-colors pb-1" href="#projects">Projects</a>
+    <a class="font-mono text-sm text-ink-gray dark:text-ink-slate font-medium hover:text-primary dark:hover:text-accent-terracotta-dark transition-colors pb-1" href="#experience">Experience</a>
+    <a class="font-mono text-sm text-ink-gray dark:text-ink-slate font-medium hover:text-primary dark:hover:text-accent-terracotta-dark transition-colors pb-1" href="#contact">Contact</a>
   </nav>
+
+  <div class="flex items-center gap-stack-md">
+    <ThemeToggle />
+    <button class="hidden md:flex items-center gap-2 px-4 py-2 bg-transparent border border-ink-black dark:border-ink-border-dark font-mono text-xs text-ink-black dark:text-ink-white hover:bg-ink-black hover:text-ink-white dark:hover:bg-ink-white dark:hover:text-ink-black transition-colors">
+      <span class="w-2 h-2 rounded-full bg-brand-terracotta inline-block animate-ping"></span>
+      Live
+    </button>
+  </div>
 </header>
