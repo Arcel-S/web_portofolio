@@ -1,0 +1,32 @@
+---
+import Navbar from '@components/common/Navbar.astro';
+import '@styles/global.css';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen flex flex-col justify-between">
+    <div>
+      <Navbar />
+      <slot />
+    </div>
+    <footer class="border-t border-borderCustom py-6 text-center text-xs text-txt-muted font-mono">
+      &copy; {new Date().getFullYear()} NAMA.DEV — Built with Astro & Editorial Swiss Style
+    </footer>
+  </body>
+</html>

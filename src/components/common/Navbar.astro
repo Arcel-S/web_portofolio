@@ -1,0 +1,19 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+---
+<header class="sticky top-0 z-50 bg-bg-primary/90 backdrop-blur-md border-b border-borderCustom">
+  <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="/" class="font-serif text-xl font-bold tracking-tight text-txt-primary flex items-center gap-2">
+      <span class="w-2.5 h-2.5 rounded-full bg-brand-terracotta inline-block"></span>
+      NAMA.DEV
+    </a>
+    
+    <div class="flex items-center gap-6 text-sm font-medium">
+      <a href="/projects" class="hover:text-brand-terracotta transition-colors">Projects</a>
+      <a href="/experience" class="hover:text-brand-terracotta transition-colors">Experience</a>
+      <a href="/about" class="hover:text-brand-terracotta transition-colors">About</a>
+      <a href="/contact" class="hover:text-brand-terracotta transition-colors">Contact</a>
+      <ThemeToggle />
+    </div>
+  </nav>
+</header>
