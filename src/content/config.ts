@@ -6,8 +6,8 @@ const projectsCollection = defineCollection({
     title: z.string(),
     subtitle: z.string(),
     description: z.string(),
-    coverImage: image(),
-    coverAlt: z.string(),
+    coverImage: z.string().optional(),
+    coverAlt: z.string().optional(),
     category: z.enum(['Frontend', 'Fullstack', 'System Architecture', 'Tooling']),
     featured: z.boolean().default(false),
     pubDate: z.date(),
@@ -33,7 +33,7 @@ const experienceCollection = defineCollection({
       endDate: z.string().default('Present'),
       type: z.enum(['Full-time', 'Part-time', 'Contract', 'Freelance']),
       description: z.array(z.string()),
-      keyAchievements: z.array(z.string()),
+      keyAchievements: z.array(z.string()).optional(),
       technologies: z.array(z.string())
     }))
   }))

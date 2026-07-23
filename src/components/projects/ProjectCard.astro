@@ -1,0 +1,73 @@
+---
+const { project } = Astro.props;
+---
+
+<article class="bg-surface-card-light dark:bg-surface-card-dark border border-ink-black/20 dark:border-ink-border-dark rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col overflow-hidden">
+  <!-- Banner Header Mockup (Clean Screenshot Preview Without Text Overlay Clutter) -->
+  <div class="aspect-[16/9] border-b border-ink-black/10 dark:border-ink-border-dark overflow-hidden relative bg-surface-cream-dim dark:bg-surface-charcoal flex flex-col justify-between p-4">
+    
+    {project.data.coverImage ? (
+      <img 
+        src={project.data.coverImage} 
+        alt={project.data.coverAlt || project.data.title}
+        class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+      />
+    ) : (
+      <div class="absolute inset-0 bg-gradient-to-br from-surface-cream-dim via-surface-card-light to-surface-container dark:from-surface-charcoal dark:via-surface-card-dark dark:to-surface-charcoal-dim flex items-center justify-center p-6 text-center">
+        <h4 class="font-serif text-2xl font-bold text-ink-black dark:text-ink-white">{project.data.title}</h4>
+      </div>
+    )}
+
+    <!-- Top Badges Overlay (Clean Header Only SYSTEM PREVIEW) -->
+    <div class="flex justify-end items-center z-10 relative">
+      <span class="font-mono text-[10px] text-ink-black dark:text-ink-white bg-surface-card-light/95 dark:bg-surface-charcoal/95 backdrop-blur px-2.5 py-1 rounded-md border border-ink-black/20 dark:border-ink-border-dark shadow-md font-bold">
+        SYSTEM PREVIEW
+      </span>
+    </div>
+
+    <!-- Bottom URL Link Overlay -->
+    <div class="flex items-center gap-1.5 font-mono text-[10px] text-ink-black dark:text-ink-white bg-surface-card-light/95 dark:bg-surface-charcoal/95 backdrop-blur px-2.5 py-1 rounded-md border border-ink-black/10 dark:border-ink-border-dark/50 z-10 relative w-fit shadow-md font-bold">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span class="truncate">{project.data.liveUrl || 'LIVE DEPLOYMENT'}</span>
+    </div>
+  </div>
+
+  <!-- Content Body: Title, Subtitle, Description, Tech Stack & Action -->
+  <div class="p-stack-lg flex-grow flex flex-col">
+    <!-- Category Badge & Judul Proyek -->
+    <div class="mb-stack-md border-b border-ink-black/10 dark:border-ink-border-dark pb-stack-sm">
+      <span class="font-mono text-[10px] text-brand-terracotta font-bold uppercase tracking-wider block mb-1">
+        {project.data.category}
+      </span>
+      <h3 class="font-serif text-2xl font-bold text-ink-black dark:text-ink-white group-hover:text-brand-terracotta transition-colors leading-tight">
+        {project.data.title}
+      </h3>
+      <p class="font-mono text-xs text-brand-sage font-bold mt-1">{project.data.subtitle}</p>
+    </div>
+
+    <!-- Deskripsi Proyek -->
+    <p class="font-sans text-sm text-ink-gray dark:text-ink-slate mb-stack-md flex-grow leading-relaxed">
+      {project.data.description}
+    </p>
+
+    <!-- Tech Stack Tags -->
+    <div class="flex flex-wrap gap-2 mb-stack-md">
+      {project.data.techStack.map((tech: string) => (
+        <span class="font-mono text-xs border border-ink-border-light dark:border-ink-border-dark px-2.5 py-1 rounded-md bg-surface-cream dark:bg-surface-charcoal text-ink-gray dark:text-ink-slate font-medium">
+          {tech}
+        </span>
+      ))}
+    </div>
+
+    <!-- Action Link -->
+    {project.data.liveUrl ? (
+      <a class="font-mono text-xs text-brand-terracotta font-bold hover:underline flex items-center gap-1 mt-auto border-t border-ink-black/10 dark:border-ink-border-dark pt-stack-sm" href={project.data.liveUrl} target="_blank" rel="noopener noreferrer">
+        Buka Aplikasi Live &rarr;
+      </a>
+    ) : (
+      <a class="font-mono text-xs text-ink-black dark:text-ink-white group-hover:text-brand-terracotta transition-colors flex items-center gap-1 mt-auto border-t border-ink-black/10 dark:border-ink-border-dark pt-stack-sm" href={`/projects/${project.slug}`}>
+        Read Case Study &rarr;
+      </a>
+    )}
+  </div>
+</article>
