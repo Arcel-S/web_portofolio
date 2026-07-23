@@ -1,0 +1,62 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Timeline from '@components/experience/Timeline.astro';
+import { getEntry } from 'astro:content';
+
+const workHistoryEntry = await getEntry('experience', 'work-history');
+const experienceData = workHistoryEntry ? workHistoryEntry.data : [];
+---
+
+<BaseLayout title="Experience & Academic Track | Marcel Kevin Togap Siagian">
+  <main class="flex-grow pt-[120px] pb-section-gap px-grid-margin max-w-[1440px] mx-auto w-full relative z-10">
+    <!-- Page Header -->
+    <div class="mb-section-gap max-w-4xl border-b border-ink-black dark:border-ink-border-dark pb-stack-lg">
+      <span class="font-mono text-xs text-brand-terracotta uppercase tracking-wider block mb-1">ACADEMIC &amp; SCHOLARSHIP TIMELINE</span>
+      <h1 class="font-serif text-4xl lg:text-6xl text-ink-black dark:text-ink-white mb-stack-md font-bold">
+        Engineering Architecture &amp; Evolution
+      </h1>
+      <p class="font-sans text-lg text-ink-gray dark:text-ink-slate max-w-2xl">
+        A chronological record of computer science assistantships at ITERA, national AI developer scholarship achievements, and technical credentials.
+      </p>
+    </div>
+
+    <!-- Experience Timeline Component (Renders all 8 teaching assistantships from work-history.json) -->
+    <Timeline experienceList={experienceData} />
+
+    <!-- Certifications & Credentials Grid (Styled with Soft Brutalism Hard Shadows) -->
+    <div class="max-w-4xl mt-section-gap border-t-2 border-ink-black dark:border-ink-border-dark pt-stack-lg">
+      <h2 class="font-serif text-3xl font-bold text-ink-black dark:text-ink-white mb-stack-md">
+        Official Certifications &amp; Credentials
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-grid-margin">
+        <div class="p-stack-lg border border-ink-black dark:border-ink-border-dark bg-surface-card-light dark:bg-surface-card-dark rounded shadow-hard hover:shadow-hard-hover hover:-translate-y-1 hover:-translate-x-1 transition-all">
+          <div class="font-mono text-xs font-bold text-brand-terracotta uppercase tracking-wider mb-2">ALIBABA CLOUD (2024 - 2026)</div>
+          <h3 class="font-serif text-xl font-bold text-ink-black dark:text-ink-white mb-2">Alibaba Cloud Certified Developer</h3>
+          <p class="font-sans text-sm text-ink-gray dark:text-ink-slate mb-3">Cloud computing architecture, containerization, and server deployment services.</p>
+          <span class="font-mono text-xs px-2 py-1 border border-ink-border-light dark:border-ink-border-dark rounded bg-surface-cream dark:bg-surface-charcoal text-ink-gray dark:text-ink-slate">Serial: ACCD0119700100012586</span>
+        </div>
+
+        <div class="p-stack-lg border border-ink-black dark:border-ink-border-dark bg-surface-card-light dark:bg-surface-card-dark rounded shadow-hard hover:shadow-hard-hover hover:-translate-y-1 hover:-translate-x-1 transition-all">
+          <div class="font-mono text-xs font-bold text-brand-sage uppercase tracking-wider mb-2">IBM / COGNITIVE CLASS (FEB 2025)</div>
+          <h3 class="font-serif text-xl font-bold text-ink-black dark:text-ink-white mb-2">Python 101 for Data Science</h3>
+          <p class="font-sans text-sm text-ink-gray dark:text-ink-slate mb-3">Data analysis, Pandas &amp; Numpy libraries, and algorithmic data processing in Python.</p>
+          <span class="font-mono text-xs px-2 py-1 border border-ink-border-light dark:border-ink-border-dark rounded bg-surface-cream dark:bg-surface-charcoal text-ink-gray dark:text-ink-slate">Verified Credential</span>
+        </div>
+
+        <div class="p-stack-lg border border-ink-black dark:border-ink-border-dark bg-surface-card-light dark:bg-surface-card-dark rounded shadow-hard hover:shadow-hard-hover hover:-translate-y-1 hover:-translate-x-1 transition-all">
+          <div class="font-mono text-xs font-bold text-primary uppercase tracking-wider mb-2">UGM X POLTEK SSN (JUL 2024)</div>
+          <h3 class="font-serif text-xl font-bold text-ink-black dark:text-ink-white mb-2">Cryptography &amp; Cybersecurity</h3>
+          <p class="font-sans text-sm text-ink-gray dark:text-ink-slate mb-3">Workshop on mathematical cryptography, cipher logic, and cyber defense systems at Museum Sandi.</p>
+          <span class="font-mono text-xs px-2 py-1 border border-ink-border-light dark:border-ink-border-dark rounded bg-surface-cream dark:bg-surface-charcoal text-ink-gray dark:text-ink-slate">FMIPA UGM Training</span>
+        </div>
+
+        <div class="p-stack-lg border border-ink-black dark:border-ink-border-dark bg-surface-card-light dark:bg-surface-card-dark rounded shadow-hard hover:shadow-hard-hover hover:-translate-y-1 hover:-translate-x-1 transition-all">
+          <div class="font-mono text-xs font-bold text-ink-gray uppercase tracking-wider mb-2">CODEPOLITAN &amp; DICODING (2024)</div>
+          <h3 class="font-serif text-xl font-bold text-ink-black dark:text-ink-white mb-2">Backend Node.js &amp; SQL Foundations</h3>
+          <p class="font-sans text-sm text-ink-gray dark:text-ink-slate mb-3">RESTful API development, database modeling &amp; normalization, and basic AI concepts.</p>
+          <span class="font-mono text-xs px-2 py-1 border border-ink-border-light dark:border-ink-border-dark rounded bg-surface-cream dark:bg-surface-charcoal text-ink-gray dark:text-ink-slate">Verified Certificates</span>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

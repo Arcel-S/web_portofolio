@@ -60,7 +60,6 @@
                 "startDate",
                 "type",
                 "description",
-                "keyAchievements",
                 "technologies"
               ],
               "additionalProperties": false

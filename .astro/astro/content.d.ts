@@ -151,23 +151,33 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"projects": Record<string, {
-  id: string;
-  slug: string;
+		"projects": {
+"global-news-portal.mdx": {
+	id: "global-news-portal.mdx";
+  slug: "global-news-portal";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">;
-  render(): Render[".md"];
-}>;
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".mdx"] };
+"verobox-ai.mdx": {
+	id: "verobox-ai.mdx";
+  slug: "verobox-ai";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".mdx"] };
+};
 
 	};
 
 	type DataEntryMap = {
-		"experience": Record<string, {
-  id: string;
+		"experience": {
+"work-history": {
+	id: "work-history";
   collection: "experience";
-  data: InferEntrySchema<"experience">;
-}>;
+  data: InferEntrySchema<"experience">
+};
+};
 
 	};
 
