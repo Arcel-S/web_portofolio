@@ -24,10 +24,10 @@ export default {
         // Extended theme colors from provided HTML
         "ink-black": "#1A1A18",
         "ink-gray": "#5A5A52",
-        "ink-slate": "#A0A098",
-        "ink-white": "#EDEDEB",
+        "ink-slate": "#C8C8C0",
+        "ink-white": "#F4F4F2",
         "ink-border-light": "#E2DDD5",
-        "ink-border-dark": "#2E3135",
+        "ink-border-dark": "#3E4247",
         "surface-cream": "#FAF8F5",
         "surface-cream-dim": "#F0EDE6",
         "surface-charcoal": "#121314",
