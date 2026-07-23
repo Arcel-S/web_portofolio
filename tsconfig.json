@@ -9,5 +9,6 @@
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"]
     }
-  }
+  },
+  "exclude": ["dist", ".astro", "node_modules", "mcp-server", "public"]
 }
