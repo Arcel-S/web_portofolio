@@ -26,11 +26,11 @@ const experienceData = workHistoryEntry ? workHistoryEntry.data : [];
         
         <!-- Left Column (Profile Photo & Identity) -->
         <div class="md:col-span-5 flex flex-col gap-stack-lg">
-          <div class="w-full aspect-[4/5] bg-surface-cream-dim dark:bg-surface-card-dark border border-ink-black/20 dark:border-ink-border-dark shadow-hard overflow-hidden relative rounded-2xl group">
+          <div class="w-full aspect-[4/5] bg-surface-cream-dim dark:bg-surface-card-dark border border-ink-black/20 dark:border-ink-border-dark shadow-xl overflow-hidden relative rounded-2xl group">
             <img 
               src="https://res.cloudinary.com/djielecvv/image/upload/v1784817492/123140054_photo_230628_nqubr5.jpg" 
               alt="Marcel Kevin Togap Siagian - Technical Profile Photo" 
-              class="w-full h-full object-cover object-center filter grayscale contrast-110 group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-500" 
               loading="eager"
             />
           </div>
@@ -47,20 +47,21 @@ const experienceData = workHistoryEntry ? workHistoryEntry.data : [];
         <!-- Right Column -->
         <div class="md:col-span-7 md:col-start-7 flex flex-col gap-section-gap">
           <section class="flex flex-col gap-stack-lg">
-            <span class="font-mono text-xs text-brand-terracotta uppercase tracking-wider block">01 / PHILOSOPHY &amp; PROFILE</span>
-            <h2 class="font-serif text-4xl lg:text-5xl leading-tight uppercase tracking-tight text-ink-black dark:text-ink-white font-bold">
-              BUILDING <br/>
-              <span class="italic text-primary">BACKEND &amp; AI</span> <br/>
-              WITH INTENT.
-            </h2>
-            <div class="h-px w-full bg-ink-black dark:bg-ink-border-dark"></div>
-            <div class="font-sans text-base lg:text-lg flex flex-col gap-stack-md max-w-2xl text-ink-gray dark:text-ink-slate leading-relaxed">
-              <p>
-                Saya adalah mahasiswa semester akhir (Semester 7) Teknik Informatika di Institut Teknologi Sumatera (ITERA). Memiliki minat mendalam pada pengembangan sistem backend, arsitektur database, analisis data, serta integrasi solusi Artificial Intelligence.
-              </p>
-              <p>
-                Selain berkuliah, saya aktif menjadi Asisten Laboratorium &amp; Asisten Tutorial di ITERA untuk 8 mata kuliah utama ilmu komputer, serta berhasil meraih penghargaan <strong>Top 10% Scholar Nasional</strong> dari 2.000+ pendaftar pada program Beasiswa AI Developer AI4IMPACT.
-              </p>
+            <div class="relative z-10">
+              <span class="font-mono text-xs text-brand-terracotta font-bold uppercase tracking-widest block mb-2">01 / PHILOSOPHY & PROFILE</span>
+              <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink-black dark:text-ink-white leading-tight mb-6">
+                BUILDING <br />
+                <span class="italic text-brand-terracotta">BACKEND & AI</span> <br />
+                WITH INTENT.
+              </h2>
+              <div class="space-y-4 font-sans text-base text-ink-black/85 dark:text-ink-slate font-medium leading-relaxed max-w-2xl">
+                <p>
+                  Saya adalah mahasiswa semester akhir (Semester 7) Teknik Informatika di Institut Teknologi Sumatera (ITERA). Memiliki minat mendalam pada pengembangan sistem backend, arsitektur database, analisis data, serta integrasi solusi Artificial Intelligence.
+                </p>
+                <p>
+                  Selain berkuliah, saya aktif menjadi Asisten Laboratorium & Asisten Tutorial di ITERA untuk 8 mata kuliah utama ilmu komputer, serta berhasil meraih penghargaan <strong class="text-ink-black dark:text-ink-white font-bold">Top 10% Scholar Nasional</strong> dari 2.000+ pendaftar pada program Beasiswa AI Developer AI4IMPACT.
+                </p>
+              </div>
             </div>
           </section>
 
