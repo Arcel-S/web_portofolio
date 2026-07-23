@@ -1,0 +1,116 @@
+[
+  {
+    "company": "Laboratorium Teknik Informatika ITERA",
+    "location": "Lampung, Indonesia",
+    "roles": [
+      {
+        "title": "Asisten Praktikum Pemrograman Berorientasi Objek (PBO)",
+        "startDate": "SEM GENAP 2025/2026",
+        "endDate": "SEKARANG",
+        "type": "Part-time",
+        "description": [
+          "Membimbing mahasiswa dalam memahami konsep Object-Oriented Programming (OOP) menggunakan Java/C++.",
+          "Menyusun dan menilai modul praktikum, kuis, serta tugas akhir mata kuliah PBO."
+        ],
+        "technologies": ["Java", "C++", "OOP", "Design Patterns"]
+      },
+      {
+        "title": "Asisten Praktikum Pemrograman",
+        "startDate": "SEM GENAP 2025/2026",
+        "endDate": "SEKARANG",
+        "type": "Part-time",
+        "description": [
+          "Mendampingi mahasiswa dalam dasar-dasar algoritma dan struktur data pemrograman prosedural.",
+          "Mengevaluasi tugas koding mingguan dan memberikan feedback teknis."
+        ],
+        "technologies": ["C++", "C", "Algorithms", "Data Structures"]
+      },
+      {
+        "title": "Asisten Praktikum Basis Data",
+        "startDate": "SEM GENAP 2025/2026",
+        "endDate": "SEKARANG",
+        "type": "Part-time",
+        "description": [
+          "Mengajar perancangan basis data relasional, ERD, normalisasi, serta query SQL kompleks.",
+          "Membimbing studi kasus implementasi database PostgreSQL/MySQL."
+        ],
+        "technologies": ["PostgreSQL", "MySQL", "SQL", "Database Modeling", "ERD"]
+      },
+      {
+        "title": "Asisten Praktikum Socio Informatika & Profesionalisme",
+        "startDate": "SEM GANJIL 2025/2026",
+        "endDate": "2025",
+        "type": "Part-time",
+        "description": [
+          "Memfasilitasi diskusi etika profesi IT, hak cipta perangkat lunak, dan dampak sosial teknologi informasi."
+        ],
+        "technologies": ["IT Ethics", "Professionalism", "Socio-Informatics"]
+      },
+      {
+        "title": "Asisten Praktikum Teori Bahasa Formal & Otomata (TBFO)",
+        "startDate": "SEM GANJIL 2025/2026",
+        "endDate": "2025",
+        "type": "Part-time",
+        "description": [
+          "Membantu pemahaman teori automata (DFA, NFA), context-free grammar, dan mesin Turing.",
+          "Membimbing implementasi penjelajah tata bahasa & pengenal bahasa otomatis."
+        ],
+        "technologies": ["Automata Theory", "DFA/NFA", "Context-Free Grammar", "Turing Machine"]
+      },
+      {
+        "title": "Asisten Praktikum Dasar Teknologi Digital (DTD)",
+        "startDate": "SEM GASAL 2025/2026",
+        "endDate": "2025",
+        "type": "Part-time",
+        "description": [
+          "Mengajar aljabar Boolean, gerbang logika, serta perancangan sirkuit kombinasional & sekuensial."
+        ],
+        "technologies": ["Digital Logic", "Boolean Algebra", "Circuit Design"]
+      },
+      {
+        "title": "Asisten Pengenalan Prodi Teknik Informatika",
+        "startDate": "SEM GASAL 2024/2025",
+        "endDate": "2024",
+        "type": "Part-time",
+        "description": [
+          "Mengenalkan dasar-dasar keilmuan Teknik Informatika dan lingkungan akademik kampus ITERA kepada mahasiswa baru."
+        ],
+        "technologies": ["Mentorship", "Informatics Orientation"]
+      }
+    ]
+  },
+  {
+    "company": "Pusat Tahap Persiapan Bersama (PTPB) ITERA",
+    "location": "Lampung, Indonesia",
+    "roles": [
+      {
+        "title": "Pengajar Tutorial Matematika Dasar 1",
+        "startDate": "SEM GASAL 2024/2025",
+        "endDate": "2024",
+        "type": "Part-time",
+        "description": [
+          "Mengajar kelas tutorial Matematika Dasar 1 bagi mahasiswa tingkat pertama ITERA.",
+          "Membahas pemecahan soal kalkulus, limit, turunan, dan integral."
+        ],
+        "technologies": ["Calculus", "Mathematics", "Teaching"]
+      }
+    ]
+  },
+  {
+    "company": "AI4IMPACT (Terra AI)",
+    "location": "National Program",
+    "roles": [
+      {
+        "title": "AI Developer Scholar (Top 10% National)",
+        "startDate": "AUG 2024",
+        "endDate": "AUG 2024",
+        "type": "Contract",
+        "description": [
+          "Meraih predikat Top 10% dari 2.000+ pendaftar nasional dalam AI Developer Track pada beasiswa AI4IMPACT 5.0.",
+          "Mengembangkan sistem chatbot cerdas Verobox menggunakan platform AI Smojo."
+        ],
+        "technologies": ["Python", "AI Chatbot", "Node.js", "Smojo AI"]
+      }
+    ]
+  }
+]
