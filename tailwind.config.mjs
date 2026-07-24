@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}'],
-  darkMode: ['class', '[data-theme="dark"]'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -31,9 +31,11 @@ export default {
         "surface-cream": "#FAF8F5",
         "surface-cream-dim": "#F0EDE6",
         "surface-charcoal": "#121314",
+        "surface-charcoal-dim": "#18191A",
         "surface-card-light": "#FFFFFF",
         "surface-card-dark": "#222427",
         "surface-container-low": "#f5f3f0",
+        "surface-container": "#e8e5df",
         "accent-sage-dark": "#52B788",
         "accent-terracotta-dark": "#E07A5F",
         "primary": "#9f3c16",
