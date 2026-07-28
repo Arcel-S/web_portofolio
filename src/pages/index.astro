@@ -6,7 +6,9 @@ import Timeline from '@components/experience/Timeline.astro';
 import { getCollection, getEntry } from 'astro:content';
 
 const projects = await getCollection('projects');
-const featuredProjects = projects.filter((p) => p.data.featured);
+const featuredProjects = projects
+  .filter((p) => p.data.featured)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const workHistoryEntry = await getEntry('experience', 'work-history');
 const experienceData = workHistoryEntry ? workHistoryEntry.data : [];
