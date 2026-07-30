@@ -6,9 +6,50 @@ import '@styles/global.css';
 
 interface Props {
   title: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
 }
 
-const { title } = Astro.props;
+const { 
+  title, 
+  description = "Marcel Kevin Togap Siagian (Marcel Siregar / Marcel Siagian) - Fullstack, Backend & Frontend Developer, Programmer AI, dan Mahasiswa Developer Teknik Informatika ITERA.", 
+  image = "https://res.cloudinary.com/djielecvv/image/upload/v1784817492/123140054_photo_230628_nqubr5.jpg",
+  canonicalURL = Astro.url.href
+} = Astro.props;
+
+const siteName = "Marcel Kevin Togap Siagian | Fullstack & Backend Developer | Programmer";
+const keywords = "Marcel Siregar, Marcel Siagian, Marcel Kevin Togap Siagian, portofolio marcel, developer, programmer, backend developer, fullstack developer, frontend developer, mahasiswa developer, web developer indonesia, software engineer lampung, ai developer itera";
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Marcel Kevin Togap Siagian",
+  "alternateName": [
+    "Marcel Siregar",
+    "Marcel Siagian",
+    "Marcel Kevin Togap",
+    "Marcel Developer",
+    "Portofolio Marcel"
+  ],
+  "url": canonicalURL,
+  "image": image,
+  "jobTitle": "Fullstack & AI Developer",
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Institut Teknologi Sumatera (ITERA)"
+  },
+  "sameAs": [
+    "https://github.com/Arcel-S",
+    "https://www.linkedin.com/in/marcelsiregar/"
+  ],
+  "email": "mailto:marcellsiregar1204@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bandar Lampung",
+    "addressCountry": "ID"
+  }
+};
 ---
 
 <!DOCTYPE html>
@@ -20,7 +61,34 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Marcel Kevin Togap Siagian" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content={siteName} />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+
+    <!-- Structured Data (JSON-LD) for Google Personal Brand & SEO -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(personSchema)} />
+
     <script is:inline>
       (function() {
         const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -42,3 +110,4 @@ const { title } = Astro.props;
     <Footer />
   </body>
 </html>
+
