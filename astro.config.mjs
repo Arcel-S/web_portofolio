@@ -5,7 +5,7 @@ import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://namaanda.dev',
+  site: 'https://mktsportofolio.web.id',
   integrations: [
     tailwind({
       applyBaseStyles: false,

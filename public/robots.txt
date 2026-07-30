@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://marcelsiagian.vercel.app/sitemap-index.xml
+Sitemap: https://mktsportofolio.web.id/sitemap-index.xml
