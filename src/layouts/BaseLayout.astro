@@ -19,36 +19,57 @@ const {
 } = Astro.props;
 
 const siteName = "Marcel Kevin Togap Siagian | Fullstack & Backend Developer | Programmer";
-const keywords = "Marcel Siregar, Marcel Siagian, Marcel Kevin Togap Siagian, portofolio marcel, developer, programmer, backend developer, fullstack developer, frontend developer, mahasiswa developer, web developer indonesia, software engineer lampung, ai developer itera";
+const keywords = "Marcel, Marcel Portofolio, Portofolio Marcel, Marcel Developer, Marcel Fullstack, Marcel Kevin Togap Siagian, Marcel Siregar, Marcel Siagian, developer marcel, marcel ai developer, fullstack developer indonesia, software engineer itera, portfolio marcel, web developer lampung, mktsportofolio.web.id";
 
 const personSchema = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Marcel Kevin Togap Siagian",
-  "alternateName": [
-    "Marcel Siregar",
-    "Marcel Siagian",
-    "Marcel Kevin Togap",
-    "Marcel Developer",
-    "Portofolio Marcel"
-  ],
-  "url": canonicalURL,
-  "image": image,
-  "jobTitle": "Fullstack & AI Developer",
-  "alumniOf": {
-    "@type": "EducationalOrganization",
-    "name": "Institut Teknologi Sumatera (ITERA)"
-  },
-  "sameAs": [
-    "https://github.com/Arcel-S",
-    "https://www.linkedin.com/in/marcelsiregar/"
-  ],
-  "email": "mailto:marcellsiregar1204@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Bandar Lampung",
-    "addressCountry": "ID"
-  }
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://mktsportofolio.web.id/#person",
+      "name": "Marcel Kevin Togap Siagian",
+      "givenName": "Marcel",
+      "familyName": "Siagian",
+      "alternateName": [
+        "Marcel",
+        "Marcel Siregar",
+        "Marcel Siagian",
+        "Marcel Developer",
+        "Marcel Portofolio",
+        "Portofolio Marcel",
+        "Marcel Fullstack",
+        "Marcel AI Developer"
+      ],
+      "url": "https://mktsportofolio.web.id/",
+      "image": image,
+      "jobTitle": "Fullstack & AI Developer",
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Institut Teknologi Sumatera (ITERA)"
+      },
+      "sameAs": [
+        "https://github.com/Arcel-S",
+        "https://www.linkedin.com/in/marcelsiregar/"
+      ],
+      "email": "mailto:marcellsiregar1204@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bandar Lampung",
+        "addressCountry": "ID"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://mktsportofolio.web.id/#website",
+      "url": "https://mktsportofolio.web.id/",
+      "name": "Portofolio Marcel Kevin Togap Siagian | Fullstack & AI Developer",
+      "description": description,
+      "publisher": {
+        "@id": "https://mktsportofolio.web.id/#person"
+      },
+      "inLanguage": "id-ID"
+    }
+  ]
 };
 ---
 

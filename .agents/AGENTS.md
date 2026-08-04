@@ -33,6 +33,9 @@ These rules provide project-specific guardrails and instructions for any AI agen
    - `@assets/*` -> `src/assets/*`
    - `@utils/*` -> `src/utils/*`
 4. **View Transitions:** Keep `<ViewTransitions />` in `src/layouts/BaseLayout.astro` to ensure smooth SPA-like navigation across static pages.
+5. **Root-Absolute Navigation Links:** Always use root-absolute section links in global navigation components (`Navbar.astro`, `Footer.astro`):
+   - `href="/#about"`, `href="/#projects"`, `href="/#experience"`, `href="/#contact"`.
+   - Never use relative `#about` or `#projects` which fail on sub-routes (e.g. `/about/#projects`).
 
 ---
 
@@ -42,3 +45,11 @@ These rules provide project-specific guardrails and instructions for any AI agen
   npx astro check
   npx astro build
   ```
+
+---
+
+## 5. SEO & Structured Data Standards
+1. **Title Consistency:** Maintain standardized title formats across primary routes (`Marcel Kevin Togap Siagian | Fullstack & AI Developer`).
+2. **JSON-LD Schema Graph:** Retain `@graph` structured data in `BaseLayout.astro` linking `Person` and `WebSite` entities with alternate names (`Marcel`, `Marcel Portofolio`, `Marcel Developer`, `Marcel Fullstack`).
+3. **Asset Parity:** Sub-pages must share identical image assets (Cloudinary/absolute path) and visual component structures as the home page.
+
