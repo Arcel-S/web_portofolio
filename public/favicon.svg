@@ -1,3 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="45" fill="#C85A32"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Dark Charcoal Base Container -->
+  <rect width="512" height="512" rx="128" fill="#1A1A18"/>
+  <!-- Subtle Terracotta Accent Border -->
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="none" stroke="#C85A32" stroke-width="16" opacity="0.4"/>
+  <!-- Elegant Editorial Serif 'M' -->
+  <text x="230" y="360" font-family="'Playfair Display', 'Georgia', serif" font-weight="900" font-size="320" fill="#FAF8F5" text-anchor="middle">M</text>
+  <!-- Brand Terracotta Accent Square -->
+  <rect x="360" y="128" width="56" height="56" fill="#C85A32" rx="12"/>
 </svg>
